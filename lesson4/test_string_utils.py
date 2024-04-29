@@ -17,7 +17,7 @@ def test_capitalize():
     assert sut.capitilize("str str str") == "Str str str"    
     
     
-print(sut.trim("   skypro"))    
+# print(sut.trim("   skypro"))    
 def test_trim():
     assert sut.trim("  skypro") == "skypro"    
     assert sut.trim("") == ""    
@@ -29,9 +29,8 @@ def test_trim():
     assert sut.trim("пробел в    середине") == "пробел в    середине"
     assert sut.trim("  пробел в    середине") == "пробел в    середине"
     
-    
-print("native", "".split(","))    
-print(sut.to_list("a,b,c,d"))
+       
+# print(sut.to_list("a,b,c,d"))
 def test_to_list():
     assert  sut.to_list("a,b,c,d") == ["a", "b", "c", "d"]
     assert  sut.to_list(",,,") == ["", "", "", ""]
@@ -43,7 +42,7 @@ def test_to_list():
     assert  sut.to_list("1,2,,,,,3", ",,") == ["1,2", "", ",3"] 
     
     
-print(sut.contains("SkyPro", "P"))
+# print(sut.contains("SkyPro", "P"))
 def test_contains():
     assert sut.contains("SkyPro", "S") == True
     assert sut.contains("SkyPro", "U") == False
@@ -53,7 +52,7 @@ def test_contains():
     assert sut.contains("SkyPro", "yk") == False
 
 
-print(sut.delete_symbol("SkyPro", "k"))
+# print(sut.delete_symbol("SkyPro", "k"))
 def test_delete_symbol():
     assert sut.delete_symbol("", "") == ""
     assert sut.delete_symbol(" ", " ") == ""
@@ -63,7 +62,7 @@ def test_delete_symbol():
     assert sut.delete_symbol("04 апреля 2023", "02") == "04 апреля 23"
     
     
-print(sut.starts_with("SkyPro", "S"))
+# print(sut.starts_with("SkyPro", "S"))
 def test_starts_with():
     assert sut.starts_with("Training", "Training") == True
     assert sut.starts_with("Training", "T") == True
@@ -77,7 +76,7 @@ def test_starts_with():
     assert sut.starts_with(";;", " ") == False
  
     
-print(sut.end_with("SkyPro", "o"))
+# print(sut.end_with("SkyPro", "o"))
 def test_end_with():
     assert sut.end_with("Hello World", "") == True
     assert sut.end_with("Hello World", "d") == True
@@ -90,14 +89,14 @@ def test_end_with():
     assert sut.end_with("New,", ",") == True
     
     
-print(sut.is_empty(""))
+# print(sut.is_empty(""))
 def test_is_empty():
     assert sut.is_empty("Hello") == False
     assert sut.is_empty(" ") == True
     assert sut.is_empty("") == True
     
     
-print(sut.list_to_string([1,2,3,4]))
+# print(sut.list_to_string([1,2,3,4]))
 def test_list_to_string():
     assert sut.list_to_string(["SkyPro","Homework"]) == "SkyPro, Homework"
     assert sut.list_to_string([1,"m"], " - ") == "1 - m"
