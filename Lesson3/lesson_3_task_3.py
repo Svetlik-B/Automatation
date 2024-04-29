@@ -37,7 +37,7 @@ print(mailing1)
 #          address.city,", ", address.street, ", ",
 #          address.house, " - ", address.apartment,
 #          sep="", end=""
-# )
+#     )
 # 
 # print("Отправление", mailing1.track, "из", end=" ")
 # printAdress(from_address)
