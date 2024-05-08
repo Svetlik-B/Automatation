@@ -14,14 +14,10 @@ driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install())
 
 driver.get("http://the-internet.herokuapp.com/login")
 sleep(5)
-username = '[type="text"]'
-enter_name = driver.find_element(By.CSS_SELECTOR, username)
-enter_name.send_keys("tomsmith")
-password = '[type="password"]'
+driver.find_element(By.CSS_SELECTOR, '[type="text"]').send_keys("tomsmith")
 sleep(2)
 
-enter_password = driver.find_element(By.CSS_SELECTOR, password)
-enter_password.send_keys("SuperSecretPassword!")
+driver.find_element(By.CSS_SELECTOR, '[type="password"]').send_keys("SuperSecretPassword!")
 sleep(2)
 
 login = 'radius'

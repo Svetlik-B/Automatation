@@ -6,9 +6,9 @@ from selenium.webdriver.common.by import By
 
 driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
 
-for x in range(1,4):
-    driver.get("http://uitestingplayground.com/classattr")
-    locator_blue2 = "btn-primary"
-    driver.find_element(By.CLASS_NAME, locator_blue2).click()
-    sleep(2)
-    driver.switch_to.alert.accept()
+# for x in range(1,4):
+driver.get("http://uitestingplayground.com/classattr")
+locator_blue2 = "btn-primary"
+driver.find_element(By.CLASS_NAME, locator_blue2).click()
+sleep(2)
+driver.switch_to.alert.accept()

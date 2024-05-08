@@ -15,7 +15,7 @@ driver.get("http://the-internet.herokuapp.com/add_remove_elements/")
 sleep(5)
 
 locator_Add_Element = "button"
-for x in range(1,4):
+for x in range(1,6):
     driver.find_element(By.TAG_NAME, locator_Add_Element).click()
 sleep(10)
 

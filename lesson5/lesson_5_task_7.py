@@ -14,7 +14,7 @@ driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()
 driver.get("http://the-internet.herokuapp.com/add_remove_elements/")
 
 add_Element = "button"
-for x in range(1,4):
+for x in range(1,6):
     driver.find_element(By.CSS_SELECTOR, add_Element).click()
 
 locator_Delete = "elements"
