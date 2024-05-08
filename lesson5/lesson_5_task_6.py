@@ -20,6 +20,5 @@ sleep(2)
 driver.find_element(By.CSS_SELECTOR, '[type="password"]').send_keys("SuperSecretPassword!")
 sleep(2)
 
-login = 'radius'
-driver.find_element(By.CLASS_NAME, login).click()
+driver.find_element(By.CLASS_NAME, 'radius').click()
 sleep(2)
