@@ -1,0 +1,17 @@
+from time import sleep
+from selenium import webdriver
+from selenium.webdriver.firefox.service import Service as FirefoxService
+from webdriver_manager.firefox import GeckoDriverManager
+from selenium.webdriver.common.by import By
+
+driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
+
+# for x in range(1,4):
+driver.get("http://uitestingplayground.com/dynamicid")
+locator_blue = "btn"
+driver.find_element(By.CLASS_NAME, locator_blue).click()
+sleep(5)
+driver.refresh()
+
+
+

@@ -1,20 +1,34 @@
+import pytest
 from class_string_utils import StringUtils
 
 
 sut = StringUtils()
 
-
-def test_capitalize():
-    assert sut.capitilize("skypro") == "Skypro"    
-    assert sut.capitilize("") == ""    
-    assert sut.capitilize(" ") == " "   
-    assert sut.capitilize("test") == "Test"
-    assert sut.capitilize("tesT") == "Test" 
-    assert sut.capitilize(" test") == " test"
-    assert sut.capitilize("123") == "123"
-    assert sut.capitilize("123 456") == "123 456"
-    assert sut.capitilize("123 test") == "123 test"
-    assert sut.capitilize("str str str") == "Str str str"    
+@pytest.mark.parametrize("string, result",
+                        [("skypro", "Skypro"),
+                        ("", ""),
+                        (" "," "), 
+                        ("test", "Test"), 
+                        ("tesT", "Test"),
+                        (" test", " test"), 
+                        ("123", "123"),
+                        ("123 456", "123 456"),
+                        ("123 test", "123 test"),
+                        ("str str str", "Str str str") 
+                        ])
+def test_capitalize(string, result):
+     assert sut.capitilize(string) == result
+    
+ 
+    # assert sut.capitilize("") == ""    
+    # assert sut.capitilize(" ") == " "   
+    # assert sut.capitilize("test") == "Test"
+    # assert sut.capitilize("tesT") == "Test" 
+    # assert sut.capitilize(" test") == " test"
+    # assert sut.capitilize("123") == "123"
+    # assert sut.capitilize("123 456") == "123 456"
+    # assert sut.capitilize("123 test") == "123 test"
+    # assert sut.capitilize("str str str") == "Str str str"    
     
     
 # print(sut.trim("   skypro"))    
