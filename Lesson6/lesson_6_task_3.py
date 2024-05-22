@@ -23,6 +23,7 @@ wait.until(
 
 src = driver.find_element(By.CSS_SELECTOR, "[src='img/award.png']")
 png = src.get_attribute("src")
+
 print(png)
 
 
